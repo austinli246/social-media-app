@@ -41,7 +41,7 @@ module.exports = {
             ...user._doc,
             id: user._id,
             token
-          };
+          }
         },
         async register(
             _,
@@ -50,7 +50,8 @@ module.exports = {
             }, 
             context, 
             info
-            ){
+            )
+            {
             // Validate user data 
             const {valid, errors} = validateRegisterInput(
                 username, 
@@ -90,7 +91,7 @@ module.exports = {
                 id: res._id,
                 token
             };
-        }
+        },
     }
 };
 
