@@ -13,11 +13,11 @@ type User{
     token: String! 
     username: String!
     createdAt: String!
-    
+
 }
-input RegisterInput{
+input registerInput{
     username: String!
-    passwword: String! 
+    password: String! 
     confirmPassword: String!
     email: String! 
 }
@@ -26,5 +26,8 @@ type Query{
     }
 type Mutation{
     register(registerInput: registerInput): User!
+    login(username: String!, password: String!): User!
 }
 `;
+
+
